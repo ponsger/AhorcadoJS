@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Juego del ahorcado</title>
 </head>
 <body>
@@ -14,6 +15,31 @@
     </header>
     <main>
 
+        <section id="bienvenida">
+            <button class="btn btn-azul">Iniciar Juego</button>
+            <button class="btn btn-blanco">Agregar Palabra</button>
+        </section>
+
+        <section id="durante-juego">
+            <canvas class="dibuja-ahorcado"></canvas>
+            <div id="letras">
+                <div class="letras-correctas">
+
+                </div>
+                <div class="letras-incorrectas">
+                    
+                </div>
+            </div>
+            <button class="btn btn-azul">Nuevo Juego</button>
+            <button class="btn btn-blanco">Desistir</button>
+        </section>
+        
+        <section id="nueva-palabra">
+            <textarea name="text-nueva-palabra" id="text-nueva-palabra" cols="30" rows="10" placeholder="Ingresa la nueva palabra"></textarea>
+            <p class="advertencia">Máximo 8 palabras</p>
+            <button class="btn btn-azul">Guardar y jugar</button>
+            <button class="btn btn-blanco">Cancelar</button>
+        </section>
     </main>
     <footer>
 
