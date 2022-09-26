@@ -73,3 +73,11 @@ canvas{
 .btn-blanco{
     background-color: rgb(182, 203, 236);
 }
+
+.inicio{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
