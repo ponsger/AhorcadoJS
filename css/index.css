@@ -13,6 +13,38 @@ main{
     display: block;
 }
 
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    font-style: unset;
+    margin: 10px;
+}
+
+h1:hover{
+    scale: 1.1;
+    transition: 1s all;
+}
+
+#Mensaje-Final{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+    text-decoration:underline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline-block;
+    float: right;
+    color:red;
+}
+
+.mensaje-bienvenida{
+    font-size: 22px;
+    font-weight: lighter;
+    color: #eee;
+    margin: 20px auto;
+    text-align: justify;
+}
+
 canvas{
     width: 50%;
     border: none;
@@ -107,12 +139,30 @@ canvas{
     scale: 1.1;
 }
 
-
-
 .inicio{
     display: inline-block;
     margin: 50px;
     text-align: center;
     align-items: center;
     align-self: center;
+}
+
+footer{
+    background-color: rgba(100, 100, 200, .5);
+    margin: 5% auto;
+}
+
+footer p{
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
+    color:rgb(44, 91, 156);
+    margin: 2%;
+    letter-spacing: 5px;
+    width: 90%;
+}
+
+footer p:hover{
+    scale: 1.1;
+    transition: .5s all;
 }

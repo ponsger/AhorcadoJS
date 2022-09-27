@@ -1,6 +1,9 @@
 'use strict'
 
-var palabra = "HOLA";
+var palabras=["HOLA","MUNDO","HOGAR","TECLADO","BUZON"]
+
+var palabraAgregar="";
+var palabra = "";
 var letrasEscritas = "";
 var errores = 0;
 
@@ -9,7 +12,10 @@ var bienvenida = document.getElementById("bienvenida");
 var durante_juego = document.getElementById("durante-juego");
 var nueva_palabra = document.getElementById("nueva-palabra");
 
+//obtengo datos del textarea
+var agregaPalabra=document.getElementById("text-nueva-palabra");
 
+//inicia página
 muestraBienvenida();
 
 //#region Eventos
@@ -50,6 +56,13 @@ document.addEventListener("keydown", (e) => {
         }
     }
 });
+
+
+agregaPalabra.addEventListener("change",(e)=>{
+    palabraAgregar=e.target.value;
+});
+
+
 //#endregion
 
 //#region Funciones
@@ -99,9 +112,12 @@ function muestraNuevoJuego() {
     iniciaJuego();
 }
 
-
 function iniciaJuego() {
-    //leer palabra
+    const num=Math.floor(Math.random()*palabras.length);
+    console.log(num)
+    palabra=palabras[num];
+    errores=0;
+    limpiaCanvas();
     crearGuionesDePalabra(palabra);
 }
 
@@ -119,6 +135,8 @@ function quitaLetrasCorrectas() {
         letrasCorrectas.removeChild(child);
         child = letrasCorrectas.lastElementChild;
     }
+    var letraIncorrecta = document.getElementsByClassName('letra-incorrecta');
+    letraIncorrecta[0].value="";
 }
 
 function cancelarDesistir() {
@@ -209,6 +227,14 @@ function dibujaAhorcado() {
 
 }
 
+function limpiaCanvas(){
+    var canvas = document.querySelector("canvas");
+    var pincel = canvas.getContext("2d");
+    pincel.clearRect(0,0,canvas.width,canvas.height);
+    document.getElementById("Mensaje-Final").innerHTML = "";
+    letrasEscritas="";
+}
+
 function revisaVictoria() {
     var cuentaVacios = 0;
     var letrasCorrectas = document.getElementsByClassName('letra-correcta');
@@ -218,15 +244,22 @@ function revisaVictoria() {
         }
     }
     if (cuentaVacios == 0) {
-        document.getElementById("Mensaje-Final").innerHTML = "Has ganado"
+        document.getElementById("Mensaje-Final").innerHTML = "Has ganado";
+        document.getElementById("Mensaje-Final").style.color="green";
     } else if (errores > 9) {
         document.getElementById("Mensaje-Final").innerHTML = "Has perdido";
+        document.getElementById("Mensaje-Final").style.color="red";
     }
 }
 
 function guardaPalabra() {
-    console.log("guardar palabra");
+    if(palabraAgregar.length<=8){
+        palabras.push(palabraAgregar);
+    }
+
     muestraNuevoJuego();
 }
+
+
 
 //#endregion
