@@ -166,3 +166,57 @@ footer p:hover{
     scale: 1.1;
     transition: .5s all;
 }
+
+@media screen and (max-width: 520px) {
+    main{
+        width: 95%;
+    }
+    
+    .letra-incorrecta{
+       font-size: 16px; 
+    }
+
+    canvas{
+        width: 80%;
+        border: none;
+        margin: 2% auto;
+        height: 200px;
+    }
+
+    #text-nueva-palabra{
+        width: 90%;
+        height: 100px;
+    }
+
+    .letras-correctas{
+        border: none;
+        width: 100%;
+    }
+    
+
+    .letra-correcta{
+        text-align: center;
+        width: calc(70% / 10); /*Tomarlo en cuenta al crear los inputs*/
+    }
+
+    .btn{
+        width: 40%;
+        border-radius: 20px;
+        font-size: 14px;
+        margin: 1% auto;
+    }
+
+    .letras-incorrectas{
+        height: 10%;
+        margin: 1% 1%;
+    }
+    
+    .letra-incorrecta{
+        width:80%;
+        height: 50%;
+        font-size: 26px;
+        font-weight: lighter;
+    }
+    
+    
+}

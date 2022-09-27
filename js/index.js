@@ -1,6 +1,6 @@
 'use strict'
 
-var palabras=["HOLA","MUNDO","HOGAR","TECLADO","BUZON"]
+var palabras=["HOLA","MUNDO","HOGAR","TECLADO","BUZON","CINTURON"]
 
 var palabraAgregar="";
 var palabra = "";
