@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +10,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Juego del ahorcado</title>
 </head>
+
 <body>
     <header>
 
     </header>
     <main>
+        <header>
+            <h1>Juego del ahorcado</h1>
+        </header>
 
         <section id="bienvenida">
-            <button class="btn btn-azul inicio">Iniciar Juego</button>
-            <button class="btn btn-blanco inicio">Agregar Palabra</button>
+            <button id="iniciar-juego" class="btn btn-azul inicio">Iniciar Juego</button>
+            <button id="agregar-palabra" class="btn btn-blanco inicio">Agregar Palabra</button>
         </section>
 
         <section id="durante-juego">
-            
+            <p id="Mensaje-Final"></p>
+            <canvas class='dibuja-ahorcado'></canvas>
+            <div id='letras'>
+                <div id="letras-correctas" class='letras-correctas'>
+                </div>
+                <div id="letras-incorrectas" class='letras-incorrectas'>
+                    <input type="text" value="" class="letra-incorrecta" disabled />
+                </div>
+            </div>
+            <button id='juego-nuevo' class='btn btn-azul'>Nuevo Juego</button>
+            <button id='cancelar-desistir' class='btn btn-blanco'>Desistir</button>
         </section>
-        
+
         <section id="nueva-palabra">
-            
+            <textarea name='text-nueva-palabra' id='text-nueva-palabra' cols='30' rows='10'
+            placeholder='Ingresa la nueva palabra'></textarea>
+            <p class='advertencia'>Máximo 8 palabras</p>
+            <button id='guardar-jugar' class='btn btn-azul'>Guardar y jugar</button>
+            <button id='cancelar-desistir' class='btn btn-blanco'>Cancelar</button>
         </section>
     </main>
     <footer>
-
+        <p>Hecho en México, por Germán Pons</p>
     </footer>
     <script src="js/index.js" type="text/javascript"></script>
 </body>
+
 </html>
