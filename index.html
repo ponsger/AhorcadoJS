@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- Css de header -->
+    <link rel="stylesheet" href="css/header/titulo.css">
+<!-- Css de bienvenida -->
+    <link rel="stylesheet" href="css/bienvenida/bienvenida.css">
+
+    <!-- Css durante juego -->
+
+    <link rel="stylesheet" href="css/durantejuego/durante-juego.css">
+    <link rel="stylesheet" href="css/durantejuego/mensaje-bienvenida.css">
+    <link rel="stylesheet" href="css/durantejuego/mensaje-final.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Juego del ahorcado</title>
 </head>
@@ -17,15 +28,15 @@
     </header>
     <main>
         <header>
-            <h1>Juego del ahorcado</h1>
+            <h1 class="titulo">Juego del ahorcado</h1>
         </header>
 
-        <section id="bienvenida">
+        <section id="bienvenida" class="bienvenida">
             <button id="iniciar-juego" class="btn btn-azul inicio">Iniciar Juego</button>
             <button id="agregar-palabra" class="btn btn-blanco inicio">Agregar Palabra</button>
         </section>
 
-        <section id="durante-juego">
+        <section id="durante-juego" class="durante-juego">
             <p id="Mensaje-Final"></p>
             <p class="mensaje-bienvenida">Presiona una letra en mayusculas para conocer si aparece en la palabra</p>
             <canvas class='dibuja-ahorcado'></canvas>

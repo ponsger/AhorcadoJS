@@ -183,42 +183,40 @@ function dibujaAhorcado() {
     var pincel = canvas.getContext("2d");
     pincel.fillStyle = "black";
     pincel.beginPath();
+    pincel.fillRect(30, 145, 250, 2);//base
     switch (errores) {
         case 0:
-            pincel.fillRect(30, 145, 250, 2);//base
-            break;
-        case 1:
             pincel.fillRect(110, 10, 2, 135);//poste
             break;
-        case 2:
+        case 1:
             pincel.fillRect(110, 10, 100, 2); //techo
             break;
-        case 3:
+        case 2:
             pincel.fillRect(210, 10, 2, 25);  //lazo
             break;
-        case 4:
+        case 3:
             pincel.arc(211, 50, 15, 0, 2 * Math.PI);//cabeza
             pincel.stroke();//cabeza
             break;
-        case 5:
+        case 4:
             pincel.fillRect(210, 65, 2, 40);//cuerpo
             break;
-        case 6:
+        case 5:
             pincel.moveTo(210, 75);//mano izquierda
             pincel.lineTo(190, 70);//mano izquierda
             pincel.stroke();//mano izquierda
             break;
-        case 7:
+        case 6:
             pincel.moveTo(210, 75);  //mano derecha
             pincel.lineTo(230, 70);  //mano derecha
             pincel.stroke();        //mano derecha
             break;
-        case 8:
+        case 7:
             pincel.moveTo(210, 105);//pie izquierdo
             pincel.lineTo(195, 115); //pie izquierdo
             pincel.stroke();        //pie izquierdo
             break;
-        case 9:
+        case 8:
             pincel.moveTo(210, 105); //pie derecho
             pincel.lineTo(225, 115); //pie derecho
             pincel.stroke();        //Pie derecho
@@ -231,6 +229,9 @@ function limpiaCanvas(){
     var canvas = document.querySelector("canvas");
     var pincel = canvas.getContext("2d");
     pincel.clearRect(0,0,canvas.width,canvas.height);
+    pincel.fillStyle = "black";
+    pincel.beginPath();
+    pincel.fillRect(30, 145, 250, 2);//base
     document.getElementById("Mensaje-Final").innerHTML = "";
     letrasEscritas="";
 }

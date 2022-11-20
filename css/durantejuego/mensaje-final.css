@@ -1,0 +1,9 @@
+#Mensaje-Final{
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 5px;
+    text-decoration:underline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color:red;
+}
